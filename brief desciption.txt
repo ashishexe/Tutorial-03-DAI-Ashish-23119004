@@ -1,0 +1,29 @@
+
+
+### Description of Analysis
+
+1. **Data Exploration:**
+   - Loaded and inspected the dataset for structure, types, and statistics.
+
+2. **Visualizations:**
+   - Created bar plots and box plots to explore `tips` by `day`, `smoker`, and `sex`.
+   - Used scatter plots to examine the relationship between `total_bill` and `tip`.
+
+3. **Preprocessing:**
+   - Split data into training and validation sets (80/20).
+   - Applied one-hot encoding for categorical variables.
+
+4. **Modeling:**
+   - Evaluated several regression models:
+     - **Linear Regression:** MSE ≈ 0.89, R² ≈ 0.48.
+     - **Ridge and Lasso:** Similar performance to Linear Regression.
+     - **Decision Tree:** MSE ≈ 0.81, R² ≈ 0.53.
+     - **Random Forest:** Best performance with MSE ≈ 0.68, R² ≈ 0.60.
+     - **SVM and KNN:** Slightly worse performance compared to Tree-based models.
+
+5. **Feature Importance:**
+   - Analyzed feature contributions using tree-based models and mutual information; `total_bill` was the most informative feature.
+
+6. **Visual Diagnostics:**
+   - Plotted scatter plots and correlation matrices to visualize relationships.
+   - Conducted the Rainbow test for linearity and assessed residual plots for model evaluation.
